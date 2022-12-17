@@ -11,6 +11,13 @@ A lightweight implementation of the popular "Neofetch" which will please any Arc
   * cd /
   * cp "./home/user/Bloatfetch-master/bloatfetch" "/bin"
   
+* Or..use the makefile!
+ * cd Bloatfetch-master
+ * make | Build the program
+ * make install | Install the program
+ * make uninstall | Uninstall the program
+ * make clean | Clean up the build files
+  
   
 And there you go!
 

@@ -14,5 +14,5 @@ A lightweight implementation of the popular "Neofetch" which will please any Arc
   
 And there you go!
 
-<img src="https://i.postimg.cc/bYF4Scrk/Screenshot-from-2022-12-17-10-57-30.png" width="500" />
+<img src="https://i.postimg.cc/6QCPPKBn/bloatfetchdisplay.png" width="500" />
   

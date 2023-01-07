@@ -1,5 +1,5 @@
 # Bloatfetch
-A lightweight implementation of the popular "Neofetch" which will please any Arch user
+A lightweight and stylish implementation of the popular "Neofetch" which will please any Arch user
 
 <img src="https://i.postimg.cc/LXKrXz87/Bloatfetch.png" width="500" />
 
@@ -21,5 +21,5 @@ A lightweight implementation of the popular "Neofetch" which will please any Arc
   
 And there you go!
 
-<img src="https://i.postimg.cc/6QCPPKBn/bloatfetchdisplay.png" width="500" />
+<img src="https://i.postimg.cc/4396P7QJ/Screenshot-from-2023-01-07-16-43-22.png" width="500" />
   

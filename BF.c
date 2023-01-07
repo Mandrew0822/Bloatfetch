@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
     // Get and print hostname
     char hostname[128];
     gethostname(hostname, sizeof(hostname));
-    printf("Hostname: %s\n", hostname);
+    printf("\033[1;34mHostname: %s\033[0m\n", hostname);
 
     
         // Get and print operating system name and version
@@ -50,12 +50,12 @@ int main(int argc, char** argv) {
     fclose(fptr);
 
     // Print the name and version of the Linux distribution
-    printf("Linux distribution: %s %s\n", name, version);
+    printf("\033[1;31mLinux distribution: %s %s\033[0m\n", name, version);
 
     // Get and print DE
         char* desktop_env = getenv("DESKTOP_SESSION");
     if (desktop_env) {
-        printf("DE: %s\n", desktop_env);
+        printf("\033[1;31mDE: %s\033[0m\n", desktop_env);
     }
 
            // Determine package manager based on operating system
@@ -72,24 +72,24 @@ int main(int argc, char** argv) {
         package_manager = "unknown";
     }
 
-    printf("Package Manager: %s\n", package_manager);
+    printf("\033[1;31mPackage Manager: %s\033[0m\n", package_manager);
 
     // Get and print kernel version
-    printf("Kernel: %s\n", uname_buf.release);
+    printf("\033[1;31mKernel: %s\033[0m\n", uname_buf.release);
 
     // Get and print uptime
     FILE* uptime_file = fopen("/proc/uptime", "r");
     double uptime;
     fscanf(uptime_file, "%lf", &uptime);
     fclose(uptime_file);
-    printf("Uptime: %ld days, %ld hours, %ld minutes\n", (long)uptime / 86400, ((long)uptime % 86400) / 3600, ((long)uptime % 3600) / 60);
+    printf("\033[1;31mUptime: %ld days, %ld hours, %ld minutes\033[0m\n", (long)uptime / 86400, ((long)uptime % 86400) / 3600, ((long)uptime % 3600) / 60);
 
         // Get and print CPU information
     FILE* cpuinfo_file = fopen("/proc/cpuinfo", "r");
     char line[1024];
     while (fgets(line, sizeof(line), cpuinfo_file)) {
         if (strncmp(line, "model name", 10) == 0) {
-            printf("CPU: %s", line + 13);
+            printf("\033[1;31mCPU: %s\033[0m", line + 13);
             break;
         }
     }
@@ -101,7 +101,7 @@ int main(int argc, char** argv) {
     FILE* lspci_file = popen("lspci | grep -i 'vga\\|3d\\|2d'", "r");
     if (lspci_file) {
         if (getline(&gpu_info, &gpu_info_size, lspci_file) > 0) {
-            printf("GPU: %s", gpu_info);
+            printf("\033[1;31mGPU: %s\033[0m", gpu_info);
         }
         pclose(lspci_file);
     }
@@ -129,7 +129,7 @@ int main(int argc, char** argv) {
             int total_memory_gb = total_memory_mb / 1024;
 
             // Print the value with the "RAM:" prefix
-            printf("RAM: %d MB (%d GB)\n", total_memory_mb, total_memory_gb);
+            printf("\033[1;31mRAM: %d MB (%d GB)\033[0m\n", total_memory_mb, total_memory_gb);
             break;
         }
     }
@@ -137,12 +137,13 @@ int main(int argc, char** argv) {
     // Close the file
     fclose(meminfo_file);
     
-printf(" _ _     \n");
-printf("| (_)      \n");
-printf("| |_ _ __  _   ___  __\n");
-printf("| | | '_ \\| | | \\ \\/ /\n");  // remember, \ has a special meaing so if you want to change this art put a double \\ to make a slash      
-printf("| | | | | | |_| |>  < \n");
-printf("|_|_|_| |_|\\__,_/_/\\_\\\n");              
+printf("\033[1;32m _ _     \033[0m\n");
+printf("\033[1;32m| (_)      \033[0m\n");
+printf("\033[1;32m| |_ _ __  _   ___  __\033[0m\n");
+printf("\033[1;32m| | | '_ \\| | | \\ \\/ /\033[0m\n");  // remember, \ has a special meaing so if you want to change this art put a double \\ to make a slash      
+printf("\033[1;32m| | | | | | |_| |>  < \033[0m\n");
+printf("\033[1;32m|_|_|_| |_|\\__,_/_/\\_\\\033[0m\n");              
+          
 
 
 

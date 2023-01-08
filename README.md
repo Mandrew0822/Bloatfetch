@@ -17,7 +17,7 @@ A lightweight and stylish implementation of the popular "Neofetch" which will pl
   * make install | Install the program
   * make uninstall | Uninstall the program
   * make clean | Clean up the build files
-  [If you get a permissions error then try using sudo]
+[If you get a permissions error then try using sudo]
   
 And there you go!
 

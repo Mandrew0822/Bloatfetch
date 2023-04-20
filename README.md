@@ -6,10 +6,8 @@ A lightweight and stylish implementation of the popular "Neofetch" which will pl
 [Make sure to download the .zip file from github and extract it to your home directory]
 * Installation
   * cd Bloatfetch-master
-  * clang BF.c -o bloatfetch
-  * sudo -i
-  * cd /
-  * cp "./home/user/Bloatfetch-master/bloatfetch" "/bin"
+  * cc BF.c -o bloatfetch
+  * sudo cp "./home/user/Bloatfetch-master/bloatfetch" "/bin"
   
 * Or..use the makefile!
   * cd Bloatfetch-master
@@ -23,5 +21,5 @@ A lightweight and stylish implementation of the popular "Neofetch" which will pl
   
 And there you go!
 
-<img src="https://i.postimg.cc/4396P7QJ/Screenshot-from-2023-01-07-16-43-22.png" width="500" />
+[![Screenshot-from-2023-01-07-16-43-22.png](https://i.postimg.cc/rpVhQB7z/Screenshot-from-2023-01-07-16-43-22.png)](https://postimg.cc/tsctgMqH)
   
